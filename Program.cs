@@ -3,23 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 
-namespace RegexExp8
+namespace ANonymousDel
 {
+	public delegate int AddnumsDelegate(int a, int b, int c);
+
 	class Program
 	{
-		static void Main()
+		//public static int Addnums(int a, int b, int c)
+		//{
+
+		//	Console.WriteLine(a+b+c);
+
+		//}
+		static void Main(string[] args)
 		{
-			// Replace 2 or more digit pattern with a string.
-			Regex regex = new Regex(@"\d+");
-			string result = regex.Replace("cat 123 456", "animal");
-			string right = regex.Replace("pigeon 123 456", "bird");
-			Console.WriteLine("RESULT: {0}", result);
-			Console.WriteLine("RESULT: {0}", right);
+			//AddnumsDelegate add = new AddnumsDelegate(Addnums);
+			
+			AddnumsDelegate add = delegate (int a, int b, int c)
+			{
+				Console.WriteLine(a + b + c);
+			};
+			int v=add.Invoke(100, 50, 150);
+			Console.WriteLine(v);
 			Console.ReadLine();
 
+
+
 		}
-		
 	}
 }
