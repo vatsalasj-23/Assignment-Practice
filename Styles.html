@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript styles</title>
+
+
+	<style>
+		.a{
+			background-color:#0094ff;
+			border:200px;
+			font-size:x-large;
+			font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-style:italic;
+			color:red;
+		}
+
+		.b {
+			background-color: darkseagreen;
+			background-position-x: center;
+			font-family: font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size:larger;
+			font-style:oblique;
+			text-align:center;
+			color:#eb3b22;
+		}
+
+		.c {
+			background-origin:padding-box;
+			background-position-x:center;
+			background-color:wheat;
+			color:teal;
+			font-family:Verdana, Geneva, Tahoma, sans-serif;
+			font-style:italic;
+			text-align:right;
+
+		
+		}
+
+		.d {
+			background-color:#cad1bd;
+			color:#4a4545;
+			background-position-y:bottom;
+			background-origin:content-box;
+			font-family:'Times New Roman', Times, serif;
+			font-style:normal;
+			text-align-last:center;
+			font-size:25px;
+		}
+
+		.e {
+			background-color:rgba(217, 145, 30, 0.45);
+			color:rgba(241, 49, 49, 0.95);
+			font-style:italic;
+			font-family:cursive;
+			font-size:xx-large;
+			text-align:center;
+		
+		}
+
+
+		.f {
+			background-color:rgba(55, 52, 38, 0.25);
+			color:#131f26;
+			font-style:unset;
+			font-family:Papyrus;
+			font-size:x-large;
+			text-align:match-parent;
+		}
+
+	</style>
+</head>
+<body>
+	<h1 class="a">welcome to the world of technology</h1>
+	<h2 class="b">welcome to training</h2>
+	<h3 class="c">Learning is Fun</h3>
+	<h4 class="d">Javascript is simple to learn</h4>
+	<h5 class="e">Javascript programming is very funny and crazy</h5>
+	<h6 class="f">Javascipt and html runs theough web browser</h6>
+
+	<p>click the button to disable the button!! </p>
+	<button id="button" onclick="buttonFunction()">click here</button>
+
+	<script>
+		function buttonFunction() {
+			document.getElementById("button").disabled = true;
+			alert("button is disabled");
+		}
+	</script>
+</body>
+</html>
