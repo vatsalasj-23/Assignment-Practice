@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JQUERY</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#hide").click(function () {
+				$("h3").hide(5000);
+			});
+			$("#show").click(function () {
+				$("h3").show(5000);
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("h3").toggle();
+			});
+
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<h3>This is demo of Hide and shoe effects-JQUERY</h3>
+	<h3>This is demo of Hide and shoe effects-JQUERY</h3>
+	<h3>This is demo of Hide and shoe effects-JQUERY</h3>
+
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
+	<button id="button">click here to toggle</button>
+</body>
+</html>
