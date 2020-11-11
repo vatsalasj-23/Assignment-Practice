@@ -1,0 +1,100 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+	<div>
+		<h1>Hello,THis is an example of Razor Engine</h1></br>
+		<label>Addition of 10 and 20 is:@(10 + 20)</label></br>
+		<label>Subtraction of 20 and 10 is:@(20 - 10)</label></br>
+		<label>Multiplication of 5*4 is@(5 * 4)</label></br>
+		<label>Division of 20 and 10 is@(20 / 10)</label></br>
+		<label>Modulus of 40 and 20 is@(40 % 20)</label></br>
+	</div>
+
+	<div>
+		<label>
+			Today time is -@DateTime.Now
+		</label>
+
+	</div>
+	<div>
+		<p>
+			This is a Razor syntax view and implemented single line expression
+		</p>
+	</div>
+	<div>
+		@{
+			var job="I am an engineer";
+			var Colorlist=new List<string>(){"white","Orange","red"};
+			var NumberList = new List<int>() { 1, 2, 3, 4, 5 };
+		}
+	</div>
+
+
+	<div>
+		<label>Addition of 2 and 3 is:@(2+3)</label></br>
+
+		@{
+			foreach (var b in Colorlist)
+			{
+				<label>@(b)</label>
+			}
+		}
+	</div>
+
+	*@*@<div>
+		<h1>Escape Sequence in Razor view Engineer</h1>
+		<div>ganga.gm@dxc.com</div>
+		<label>
+			My emai address is:-@@ganga.gm@gmail.com
+		</label>
+	</div>*@
+
+	<div>
+		@{
+
+			var a = 3;
+			var is_true = true;
+
+		}
+	</div>
+		<div>
+			@if(a % 2==0)
+			{
+				<h2>Hello, this is the If Block</h2>
+				<h2>the no is 10</h2>
+
+			}
+			else if(a %2!=0)
+			{
+				<h2>The numberis Odd</h2>
+			}
+			else
+			{
+				<h2>This is else block </h2>
+			}
+			<div>
+				@(a==3?"Number is not equal to 3":"Number is not equal to 3")</br>
+
+				@(is_true==true?"Condition is true":"Condition is not true")
+			</div>
+
+			<h2>Loops in Razor</h2>
+			<div>
+				@for (int i = 0; i <= 10; i++)
+				{
+					<h1>For Loop @i</h1>
+				}
+			</div>
+		</div>
+</body>
+</html>

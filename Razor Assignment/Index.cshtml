@@ -1,0 +1,96 @@
+﻿
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RazorAssignment</title>
+</head>
+<body>
+	<h1>This is an Example of Single line Razor Expression</h1></br>
+	<div>
+		<h2>My name is:@("Vatsala" + " S" + " Jagadeesha")</h2></br>
+	</div>
+
+	<div>
+		<h2>My name is:@("Darshan " + "S" + " Jagadeesha")</h2></br>
+	</div>
+
+
+	<div>
+		<h1>This is an Example of Multi line Razor Expression</h1></br>
+	</div>
+
+	<div>
+		@{
+			string a = "Vatsala";
+			string b = " S";
+			string c = " Jagadeesha";
+		}
+		<h2>My name is:-@(a + b + c)</h2></br>
+	</div>
+
+	<div>
+		<h1>This is multi line razor expression</h1>
+		@{
+			var x = 100;
+			var y = 200;
+			var m = 3;
+			var n = 2;
+
+
+		}
+		<h2>Addition of two numbers is:-@(x + y)</h2></br>
+		<h2>Subtraction of two numbers is:-@(y - x)</h2></br>
+		<h2>Multiplication of two numbers is:-@(m * n)</h2></br>
+		<h2>Division of two numbers is:-@(m / n)</h2></br>
+		<h2></h2>
+	</div>
+
+	<div>
+		<h3>
+			Comaparing two values using If Statement</h2>
+			@{
+				var p = "30";
+				var q = "300";
+			}
+			@if (p == q)
+			{
+				<h3>Both values are equal</h3>
+			}
+			else
+			{
+				<h3>Values are not equal</h3>
+			}
+	</div>
+
+	<h2>Foreach</h2>
+	<div>
+		@{
+			var NumList = new List<string>() { "10", "20", "30", "40", "50", "60" };
+		}
+
+	</div>
+	<div>
+		@foreach (var names in NumList)
+		{
+			<h2>The numbers in the NumList are :- @names.Contains("10")</h2>
+		}
+	</div>
+
+	<div>
+		<h2>Numbers from 1 to 99</h2>
+		@for (int i = 1; i < 100; i++)
+		{
+			<h2>The Numbers are:- </h2>
+			<h3>@i</h3>
+		}
+	</div>
+
+
+</body>
+</html>
