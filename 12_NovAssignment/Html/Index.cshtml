@@ -1,0 +1,55 @@
+﻿
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+	<div>
+		@Html.ActionLink("CLICK ME", "About")
+	</div>
+	<br />
+
+	<div>
+		<label>Username:</label>@Html.TextBox("textbox1")
+	</div><br />
+	<div>
+		<label>Fullname</label>@Html.TextBox("textbox2")
+	</div><br />
+	<div>
+		<label>Lastname</label>@Html.TextBox("textbox3")
+	</div><br />
+	<div>
+		<label>Age</label>@Html.TextBox("textbox4")
+	</div><br />
+	<div>
+		<label>EmailID</label>@Html.TextBox("textbox5")
+	</div><br />
+	<div>
+		<label>
+			Male
+		</label>@Html.RadioButton("Gender", "Male", true, new { id = "Male" })
+	</div>
+	<div>
+		<label>
+			Female
+		</label>@Html.RadioButton("Gender", "Female", true, new { id = "Female" })
+	</div>
+	<div>
+		<label>
+			Accept terms and conditions
+		</label>@Html.CheckBox("checkbox1")
+	</div><br />
+
+	
+    <button>Submit</button>
+
+
+</body>
+</html>

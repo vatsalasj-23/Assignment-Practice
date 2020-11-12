@@ -1,0 +1,144 @@
+﻿
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+		@helper MyListHelper(string[] str)
+		{
+			<ul>
+				@foreach (var item in str)
+				{
+					<li>@item</li>
+				}
+			</ul>
+
+	    }
+    </div>
+	<div>
+		@helper Greetings(int[] num)
+		{ 
+
+			<ol>
+				@foreach (var term in num)
+				{
+					<li>@term</li>
+				}
+			</ol>
+		}
+	</div>
+
+	<div>
+		@helper Flowers(string[] vsj)
+		{
+			<ol>
+				@foreach (var flowersss in vsj)
+				{
+					<li>@flowersss</li>
+				}
+			</ol>
+		}
+			
+	</div>
+	<div>
+		@helper Movies(string[] TV)
+		{
+			<OL>
+				@foreach (var films in TV)
+				{
+					<li>@films</li>
+				}
+			</OL>
+		}
+	</div>
+	<div>
+		@helper Indian_Actress(string[] movie)
+		{
+			<ol>
+				@foreach (var hero in movie)
+				{
+					<li>@hero</li>
+				}
+			</ol>
+		}
+	</div>
+
+	<div>
+		@helper Singers(string[] Song)
+		{
+			<ol>
+				@foreach(var sang in Song)
+				{
+					<li>
+						@sang
+
+					</li>
+				}
+			</ol>
+		}
+	</div>
+
+	<div>
+		<label>
+			List of Cricket Players
+		</label>
+		<div>
+			@MyListHelper(new string[]{ "SACHIN","TENDULKAR","RAHUL","DRAVID"})
+		</div>
+	</div> 
+
+	<div>
+		<label>
+			List of Greetings
+		</label>
+		<div>
+			@Greetings(new int[] { 2,3,0,6,1,9,9,9 })
+		</div>			
+	</div>
+
+	<div>
+		<label>
+			List if flowers
+		</label>
+		<div>
+			@Flowers(new string[] { "rose","hibiscus","lily","jasmine","mandhara"})
+		</div>
+	</div>
+
+	<div>
+		<label>
+			List of Movies
+		</label>
+		<div>
+			@Movies(new string[] { "Power","current","energy"})
+		</div>
+	</div>
+
+	<div>
+		<label>
+			List of Indian_Actress
+		</label>
+		<div>
+			@Indian_Actress(new string[] { "Rajkumar","Vishnuvardhan","Amitabhachan"})
+		</div>
+	</div>
+
+	<div>
+		<label>
+			List of singers
+		</label>
+		<div>
+			@Singers(new string[] { "SPB","VP","RK","AR","HAMSALEKHA"})
+		</div>
+	</div>
+
+</body>
+</html>
