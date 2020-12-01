@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Online Movie Ticket Booking</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+	<div>
+		<h1 class="text-center" style="color:blue" >Online Movie Ticket Booking</h1>
+	</div>
+</body>
+<body>
+	<style>
+		body {
+			background-color:bisque;
+		}
+	</style>
+	@*<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>@Html.ActionLink("Home", "Index", "Home")</li>
+						<li>@Html.ActionLink("About", "About", "Home")</li>
+						<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+					</ul>
+				</div>
+			</div>
+		</div>*@
+
+	<nav class="navbar navbar-inverse">
+		<ul class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Online Movie Ticket Booking</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					@*<li class="active"><a href="#">Home</a></li>
+		@*<button class="btn btn-default"><a href="#">Home</a></button>*@
+					@*class="nav navbar-nav">*@
+					@*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+					@*<li class="active"><a href="https://th.bing.com/th/id/OIP.akcnmGnwgeRj__SwsejJ_wHaFj?pid=Api&rs=1.jpg">Home</a></li>*@
+					<li><a href="~/Home/About">About</a></li>
+					<li><a href="~/Home/Contact">Contact</a></li>
+				    <li><a href="~/Admin_Login/Create">Admin Login</a></li>
+					<li><a href="~/Menu/Menu">Menu</a></li>
+					@*<li><a href="~/>Menu</a></li>*@
+					@*<li>@Html.ActionLink("Menu","Menu","MovieLists")</li>*@
+					</ul>
+				@*<li>@Html.ActionLink("Login", "Login", "Home")</li>*@
+			</div>
+			@*<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search Movie Shows, Plays, Sports and Events ">
+			</div>*@
+			<ul class="nav navbar-nav navbar-right">
+				<a href="~/AdminTables/Create" class="btn btn-primary navbar-btn">Register</a>
+			</ul>
+
+
+			</div>
+</nav>
+
+
+	<div class="container body-content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - Online Movie Ticket Booking</p>
+		</footer>
+	</div>
+
+	@*<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li>@Html.ActionLink("Home", "Index", "Home")</li>
+			<li>@Html.ActionLink("About", "About", "Home")</li>
+			<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+			<li>@Html.ActionLink("AdminList", "AdminList", "Admin")</li>
+		</ul>
+	</div>*@
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	<script src="~/Scripts/jquery.validate.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+	@RenderSection("scripts", required: false)
+</body>
+</html>
